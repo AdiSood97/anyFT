@@ -1,0 +1,56 @@
+
+<div id="modalform" class="modal fade p-0">
+    <div class="modal-dialog dialog-animated">
+        <div class="modal-content">
+            <div class="modal-header" data-dismiss="modal" id="modal-close">
+                Tell Us About Yourself <i class="far fa-times-circle icon-close" id="close-button"></i>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                   
+                    <form action="" [formGroup]="signupForm">
+                         <!-- Form 1 -->
+                        <div class="col-12 align-self-center" *ngIf="stage == 0">
+                            <div class="row">
+                                <div class="col-12 pb-3">
+                                    <h2 class="search-title mt-0 mb-3">What should we call you?</h2>
+                                    <p>This will be the name people see.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 input-group mt-4">
+                                    <input type="text" formControlName="user_name" placeholder="Ex: Beeple_69">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 input-group align-self-center button-next">
+                                    <button class="btn btn-bordered-white mt-3" (click)="stageNext()">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Form 2 -->
+                        <div class="col-12 align-self-center" *ngIf="stage == 1">
+                            <div class="row">
+                                <div class="col-12 pb-3">
+                                    <h2 class="search-title mt-0 mb-3">Want to provide an email?</h2>
+                                    <p>This will allow us to reach you with offers and deals tailormade for you.(it's optional)</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 input-group mt-4">
+                                    <input type="text" formControlName="email" placeholder="Ex: beeple@crypto.com">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 input-group align-self-center button-next">
+                                    <button class="btn btn-bordered-white mt-3" (click)="submit()" >Get Started</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+#file-upload-button{
+    background: black;
+    display: none !important;
+}
+input[type=file]::file-upload-button{
+    display: none !important;
+}
+input[type=file]::file-selector-button {
+    border: 2px solid #6c5ce7;
+    padding: .2em .4em;
+    border-radius: .2em;
+    background-color: #a29bfe;
+    transition: 1s;
+    display: none;
+  }
+.capitalize{
+    text-transform: capitalize;
+}

@@ -1,0 +1,115 @@
+.modalTitle {
+  font-weight: 600;
+  font-size: 1em;
+  letter-spacing: 0.5px;
+  color: rgb(252, 250, 250);
+  background: rgba(145, 94, 255, 1);
+  background: -moz-linear-gradient(
+    45deg,
+    rgba(145, 94, 255, 1) 0%,
+    rgba(255, 142, 89, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    rgba(145, 94, 255, 1) 0%,
+    rgba(255, 142, 89, 1) 100%
+  );
+  background: -o-linear-gradient(
+    45deg,
+    rgba(145, 94, 255, 1) 0%,
+    rgba(255, 142, 89, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    45deg,
+    rgba(145, 94, 255, 1) 0%,
+    rgba(255, 142, 89, 1) 100%
+  );
+  background: linear-gradient(
+    45deg,
+    rgba(145, 94, 255, 1) 0%,
+    rgba(255, 142, 89, 1) 100%
+  );
+  height: 120px;
+}
+.mat-dialog-container {
+  padding: 0 !important;
+  overflow-y: hidden !important;
+}
+.icon_save {
+  position: absolute;
+  margin-left: 90px;
+  margin-top: -150px;
+}
+
+.modal_close_btn {
+  position: relative;
+  top: -116px;
+  right: 5px;
+ 
+}
+.modal_close_btn a{
+    color: #e1d6d6;
+}
+.modal_close_btn a:hover{
+    color: #645959;
+}
+
+
+/* Validator */
+
+.required:after {
+  content:" *";
+  color: #960d0d;
+}
+
+.response{
+  position: relative;
+}
+
+.api_err_response{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.api_err_response span{
+  font-size: 2em;
+  color:#960d0d ;
+}
+
+.close_btn{
+  position:absolute;
+  right: 10px;
+  top: 10px;
+}
+.close_btn{
+  cursor: pointer;
+}
+
+
+/* ==========================================================================
+   #FONT
+   ========================================================================== */
+   .font-robo {
+    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+  }
+  
+  .font-poppins {
+    font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+  }
+  
+  /* ==========================================================================
+     #GRID
+     ========================================================================== */
+  
+
+  .mat-dialog-container{
+      box-shadow: none !important;
+      background: transparent !important;
+  }
+  
+  .wrapper--w680{
+    max-width:620px;
+  }
+ 
+  

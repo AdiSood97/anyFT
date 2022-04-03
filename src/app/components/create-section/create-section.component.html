@@ -1,0 +1,136 @@
+<section class="author-area">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-12 col-md-4">
+                <!-- Author Profile -->
+                <div class="card no-hover text-center">
+                    <div class="image-over">
+                        <img class="card-img-top" src="assets/img/auction_2.jpg" alt="">
+                        <!-- Author -->
+                        <div class="author">
+                            <div class="author-thumb avatar-lg">
+                                <img class="rounded-circle" src="assets/img/avatar_8.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card Caption -->
+                    <div class="card-caption col-12 p-0">
+                        <!-- Card Body -->
+                        <div class="card-body mt-4">
+                            <h5 class="mb-3 capitalize">{{userDetails.user_name}}</h5>
+                            <p class="my-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="{{accountID}}">
+                                <div class="input-group-append">
+                                  <button><i class="icon-docs"></i></button>
+                                </div>
+                            </div>
+                            <!-- Social Icons -->
+                            <div class="social-icons d-flex justify-content-center my-3">
+                                <a class="facebook" href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a class="twitter" href="#">
+                                    <i class="fab fa-twitter"></i>
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a class="google-plus" href="#">
+                                    <i class="fab fa-google-plus-g"></i>
+                                    <i class="fab fa-google-plus-g"></i>
+                                </a>
+                                <a class="vine" href="#">
+                                    <i class="fab fa-vine"></i>
+                                    <i class="fab fa-vine"></i>
+                                </a>
+                            </div>
+                            <a class="btn btn-bordered-white btn-smaller" href="#">Follow</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-7">
+                <!-- Intro -->
+                <div class="intro mt-5 mt-lg-0 mb-4 mb-lg-5">
+                    <div class="intro-content">
+                        <span>Get Started</span>
+                        <h3 class="mt-3 mb-0">Create Item</h3>
+                    </div>
+                </div>
+                <!-- Item Form -->
+                <form [formGroup]="signupForm" class="item-form card no-hover" (ngSubmit)="onSubmit()">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="input-group form-group">
+                                <div class="custom-file">
+                                    <!-- <input type="file" (change)="onFileSelected($event)"/> -->
+                                  <input type="file" class="custom-file-input" id="inputGroupFile01" (change)="onFileSelected($event)">
+                                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                 
+                                  <!-- <label class="custom-file-upload">
+                                    Browse
+                                </label> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12" *ngIf="selectedFile" style=" align-items: center; justify-content: flex-end; display: flex;">
+                            File Uploaded: {{selectedFile.name}}
+                           <svg style="margin: 6px;" (click)="removeFile()"  class="svg-inline--fa fa-times-circle fa-w-16 icon-close" aria-hidden="true" focusable="false" data-prefix="far" data-icon="times-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm101.8-262.2L295.6 256l62.2 62.2c4.7 4.7 4.7 12.3 0 17l-22.6 22.6c-4.7 4.7-12.3 4.7-17 0L256 295.6l-62.2 62.2c-4.7 4.7-12.3 4.7-17 0l-22.6-22.6c-4.7-4.7-4.7-12.3 0-17l62.2-62.2-62.2-62.2c-4.7-4.7-4.7-12.3 0-17l22.6-22.6c4.7-4.7 12.3-4.7 17 0l62.2 62.2 62.2-62.2c4.7-4.7 12.3-4.7 17 0l22.6 22.6c4.7 4.7 4.7 12.3 0 17z"></path></svg>
+                        </div> 
+                        
+                        <div class="col-12">
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control" formControlName="name" name="name" placeholder="Item Name" required="required">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <textarea class="form-control" formControlName="desc" name="desc" placeholder="Description" cols="30" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" formControlName="price"  name="price" placeholder="Item Price" required="required">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" formControlName="royalty" name="royalty" placeholder="Royalty" required="required">
+                            </div>
+                        </div>
+                        <!-- <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" formControlName="desc" placeholder="Size" required="required">
+                            </div>
+                        </div> -->
+                        <!-- <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="copies" placeholder="No of Copies" required="required">
+                            </div>
+                        </div> -->
+                        <!-- <div class="col-12">
+                            <div class="form-group mt-3">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                                    <label class="form-check-label" for="inlineRadio1">Put on Sale</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">Instant Sale Price</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                    <label class="form-check-label" for="inlineRadio3">Unlock Purchased</label>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="col-12">
+                            <button class="btn w-100 mt-3 mt-sm-4" type="submit" >Create Item</button>
+                        </div>
+                    </div>
+                </form>
+                <button (click)="getSample()">hey</button>
+            </div>
+        </div>
+    </div>
+</section>

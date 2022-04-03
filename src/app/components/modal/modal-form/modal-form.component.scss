@@ -1,0 +1,31 @@
+// .modal{
+//     display: flex !important;
+//     justify-content: center;
+//     align-items: center;
+// }
+.modal.fade.show .modal-dialog.dialog-animated {
+    height: 80%;
+    margin: auto;
+}
+.modal-dialog{
+    height: 80% !important;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.modal-content{
+    height: 90%;
+}
+.modal-header{
+   background:  linear-gradient(150deg,#57048a, #4528dc);
+   color: #ffffff;
+}
+.button-next{
+    justify-content: center;
+}
+@media (min-width: 576px){
+    .modal-dialog {
+        max-width: 650px;
+        margin: 1.75rem auto;
+    }
+}
